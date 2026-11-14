@@ -1,0 +1,6 @@
+{
+  "$comment": "扩展索引：内核启动时读取本文件，按顺序加载清单。manifest 路径相对本文件解析。",
+  "extensions": [
+    { "manifest": "xihe.demo.hello/xhgcs.extension.json" }
+  ]
+}

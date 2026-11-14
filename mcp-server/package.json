@@ -1,0 +1,14 @@
+{
+  "name": "xhgcs-mcp-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "XiHe_GCS 本地 HTTP/MCP 桥，供浏览器同步数据并让 Codex Agent 观察和创建脚本/引擎。",
+  "bin": {
+    "xhgcs-bridge": "bridge.mjs"
+  },
+  "scripts": {
+    "bridge": "node bridge.mjs",
+    "bridge:stdio": "node bridge.mjs --stdio"
+  }
+}

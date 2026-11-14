@@ -1,0 +1,21 @@
+dsh: reasoning:
+The user asks in Chinese: explain in three sentences why the sky is blue, and give a formula. This is a simple knowledge question, no tools needed. No skill matches. Just answer.
+
+Three sentences + formula. Rayleigh scattering: intensity ∝ 1/λ⁴.
+
+Let me craft: 
+1. 太阳光包含各种波长的可见光，进入大气层后与远小于光波波长的氮气、氧气分子发生瑞利散射。
+2. 瑞利散射强度与波长四次方成反比，蓝光波长约为红光的一半左右，散射强度约为红光的 5-10 倍，因此被散射到天空各个方向的光以蓝光为主。
+3. 人眼看到的就是从四面八方射来的散射蓝光，所以天空呈蓝色（而日出日落时阳光穿过更厚大气，蓝光被散射殆尽，剩下红橙光）。
+
+Formula: I ∝ 1/λ⁴, or I = I₀ (8π⁴α²)/(λ⁴ R²)(1+cos²θ) ... Rayleigh scattering cross-section:
+
+σ = (8π³/(3λ⁴)) * ((n²-1)/(n²+2))² * (1/N²)... Actually the standard formula for Rayleigh scattering cross section per molecule:
+
+σ_R = (8π³ (n²-1)²) / (3 N² λ⁴) × (6+3δ)/(6-7δ) — with depolarization.
+
+Simpler: I(θ) ∝ (1+cos²θ)/λ⁴.
+
+I'll give: I_s ∝ 1/λ⁴ and the angular form. Keep it concise, three sentences, then formula. Answer in Chinese.
+
+Format: short. Three numbered sentences maybe. Then formula block. Good.

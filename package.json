@@ -1,0 +1,128 @@
+{
+  "name": "xhgcs-pro",
+  "productName": "Xuanji",
+  "version": "0.31.0",
+  "private": true,
+  "description": "XiHe_GCS PRO 地面站桌面版：串口采集、波形仪表、数据分析画布、AI 对话与 MCP 桥",
+  "main": "electron/main.js",
+  "author": "XiHe",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "dist": "electron-builder --win --x64",
+    "pack": "electron-builder --win --x64 --dir",
+    "web": "py tools/serve.py",
+    "bridge": "node mcp-server/bridge.mjs",
+    "test": "node tools/audit.cjs && node tools/regress.js",
+    "bump": "node tools/bump-version.cjs",
+    "smoke": "node tools/desktop-smoke.js",
+    "audit": "node tools/audit.cjs",
+    "check:view": "node tools/view-check.js",
+    "build:core": "vite build --config vite.config.ts",
+    "watch:core": "vite build --watch --config vite.config.ts",
+    "check:core": "tsc -p tsconfig.json",
+    "new:plugin": "node tools/new-plugin.cjs",
+    "test:unit": "tsc -p tools/tsconfig.unit.json && node --test tests/unit/core.test.cjs",
+    "verify:dist": "node tools/verify-dist.cjs",
+    "verify:dist:self": "node tools/verify-dist.cjs --self-test",
+    "release": "npm run check:core && npm run build:core && npm run test:unit && npm run test:samples && npm run test:bridge && node tools/core-smoke.js && npm test && npm run pack && npm run verify:dist",
+    "bench": "node tools/bench.cjs",
+    "test:bridge": "node tools/bridge-contract-smoke.cjs",
+    "test:native-views": "node tools/native-view-smoke.cjs",
+    "test:ui": "node tools/ui9-functional.cjs",
+    "test:samples": "node tools/sample-integrity.cjs",
+    "prepare:dsh": "node tools/prepare-dsh.cjs"
+  },
+  "devDependencies": {
+    "electron": "^44.3.0",
+    "electron-builder": "^26.15.3",
+    "playwright": "^1.62.1",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.5"
+  },
+  "build": {
+    "appId": "com.xihe.gcs.pro",
+    "productName": "Xuanji",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "index.html",
+      "assets/**/*",
+      "plugins/**/*",
+      "electron/**/*",
+      "mcp-server/**/*",
+      ".codex/skills/**/*",
+      ".codex/docs/**/*",
+      "tools/*.py",
+      "tools/*.ps1",
+      "tools/*.bat",
+      "AGENTS.md",
+      "README.md",
+      "package.json"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "mcp-server/**",
+      "tools/**"
+    ],
+    "compression": "maximum",
+    "electronLanguages": [
+      "zh-CN",
+      "en-US"
+    ],
+    "win": {
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "璇玑",
+      "deleteAppDataOnUninstall": false,
+      "include": "build/installer.nsh"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    },
+    "extraResources": [
+      {
+        "from": "types/xhgcs.d.ts",
+        "to": "types/xhgcs.d.ts"
+      },
+      {
+        "from": "vendor/dsh.zip",
+        "to": "dsh.zip"
+      },
+      {
+        "from": "dsh-ui",
+        "to": "dsh-ui"
+      }
+    ],
+    "extraFiles": [
+      {
+        "from": "build/xuanji-mcp.cmd",
+        "to": "xuanji-mcp.cmd"
+      }
+    ]
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "note": "DSH Web 界面提取件：frontend 是页面 shell，plugins/*/client.js 是各界面插件的客户端 bundle。改这里，应用启动 DSH 时覆盖到随包 DSH 的对应文件。",
+  "upstream": {
+    "name": "@deepseek-ai/dsh",
+    "version": "0.1.5-rc.2"
+  },
+  "sourceZip": {
+    "path": "vendor/dsh.zip",
+    "bytes": 69435834,
+    "sha256": "2585b35b395c14857a539bc3acc9ae85a59e3528b09be55d633795382a2bd604"
+  },
+  "extractedAt": "2026-11-10T15:17:07.363Z",
+  "frontend": {
+    "files": [
+      {
+        "path": "assets/fonts/KaTeX_AMS-Regular-BQhdFMY1.woff2",
+        "bytes": 28076,
+        "sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308"
+      },
+      {
+        "path": "assets/fonts/KaTeX_AMS-Regular-DMm9YOAa.woff",
+        "bytes": 33516,
+        "sha256": "30da91e84c893f875e252689faebdc590b2871145e8adc7f9a9d4dbd8ce0b251"
+      },
+      {
+        "path": "assets/fonts/KaTeX_AMS-Regular-DRggAlZN.ttf",
+        "bytes": 63632,
+        "sha256": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+        "bytes": 12368,
+        "sha256": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+        "bytes": 7716,
+        "sha256": "1ae6bd7475590e97e7f145a89e09ccde322f7a6bc0b91607b1c8b8ee28290fed"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+        "bytes": 6912,
+        "sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+        "bytes": 7656,
+        "sha256": "3398dd02302557a793f2863f88e02d96ce10df2abffa07c8e9fa90775116e65c"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+        "bytes": 6908,
+        "sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Caligraphic-Regular-wX97UBjC.ttf",
+        "bytes": 12344,
+        "sha256": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+        "bytes": 19584,
+        "sha256": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Fraktur-Bold-BsDP51OF.woff",
+        "bytes": 13296,
+        "sha256": "9be7ceb88004ab8ad124082246fbfcca4091e36385d4ec6ed1df67375dad50fb"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+        "bytes": 11348,
+        "sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Fraktur-Regular-CB_wures.ttf",
+        "bytes": 19572,
+        "sha256": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+        "bytes": 11316,
+        "sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Fraktur-Regular-Dxdc4cR9.woff",
+        "bytes": 13208,
+        "sha256": "5e28753be717dac97f559f49bc10be9cf3c124ddcabda6659d11cb68febc6463"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Bold-Cx986IdX.woff2",
+        "bytes": 25324,
+        "sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Bold-Jm3AIy58.woff",
+        "bytes": 29912,
+        "sha256": "c76c5d696297d51b9cb1639c7da4334f0e7dec81b42b11213b5e25ef671bb822"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Bold-waoOVXN0.ttf",
+        "bytes": 51336,
+        "sha256": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+        "bytes": 16780,
+        "sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+        "bytes": 32968,
+        "sha256": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-BoldItalic-SpSLRI95.woff",
+        "bytes": 19412,
+        "sha256": "a6f7ec0d846ac7ad975adb8959c37ed49b94acbc4ae436db9ce9e20287e4a64c"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Italic-3WenGoN9.ttf",
+        "bytes": 33580,
+        "sha256": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Italic-BMLOBm91.woff",
+        "bytes": 19676,
+        "sha256": "f1d6ef86f3b11a528bd5185199bd2443ecb2b0dead96d88674b5a2c12be24bdf"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Italic-NWA7e6Wa.woff2",
+        "bytes": 16988,
+        "sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Regular-B22Nviop.woff2",
+        "bytes": 26272,
+        "sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Regular-Dr94JaBh.woff",
+        "bytes": 30772,
+        "sha256": "c6368d87e8a1a3a5d337623d83d8dc4b868f242a9ad476237d6f8d1e0f168cdc"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Main-Regular-ypZvNtVU.ttf",
+        "bytes": 53580,
+        "sha256": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+        "bytes": 31196,
+        "sha256": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+        "bytes": 16400,
+        "sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+        "bytes": 18668,
+        "sha256": "850c0af5c2238497febaf5e461d880bf458c341f42f4f330f1b1ab5698b1998e"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Math-Italic-DA0__PXp.woff",
+        "bytes": 18748,
+        "sha256": "8a8d244581371912b8f3f5a23e2437cb2a59cd9bcaebb0346e722c05737a2571"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Math-Italic-flOr_0UB.ttf",
+        "bytes": 31308,
+        "sha256": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Math-Italic-t53AETM-.woff2",
+        "bytes": 16440,
+        "sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+        "bytes": 24504,
+        "sha256": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+        "bytes": 12216,
+        "sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Bold-DbIhKOiC.woff",
+        "bytes": 14408,
+        "sha256": "ece03cfd83e22c212cdef66feb8442d25a083beb988db3f1883f3f9738d750ba"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Italic-C3H0VqGB.woff2",
+        "bytes": 12028,
+        "sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Italic-DN2j7dab.woff",
+        "bytes": 14112,
+        "sha256": "91ee67500cc0129aa0ace3ac5c61ff1692102f0f31d02b69347fba35dcb75bf2"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf",
+        "bytes": 22364,
+        "sha256": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Regular-BNo7hRIc.ttf",
+        "bytes": 19436,
+        "sha256": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Regular-CS6fqUqJ.woff",
+        "bytes": 12316,
+        "sha256": "11e4dc8a6471ff6d6ee561d53d10fde8f7489e798257ff449c5d37c197435605"
+      },
+      {
+        "path": "assets/fonts/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2",
+        "bytes": 10344,
+        "sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Script-Regular-C5JkGWo-.ttf",
+        "bytes": 16648,
+        "sha256": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Script-Regular-D3wIWfF6.woff2",
+        "bytes": 9644,
+        "sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Script-Regular-D5yQViql.woff",
+        "bytes": 10588,
+        "sha256": "d96cdf2b3bdd4d64a8fd5f74a4c467f123a8a73931cd435889f08ffaf9bf947a"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size1-Regular-C195tn64.woff",
+        "bytes": 6496,
+        "sha256": "c943cc986384f59e86bea5fd7dc50a9c4dfe567a7c05eb40d6790720dead97c9"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size1-Regular-Dbsnue_I.ttf",
+        "bytes": 12228,
+        "sha256": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size1-Regular-mCD8mA8B.woff2",
+        "bytes": 5468,
+        "sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size2-Regular-B7gKUWhC.ttf",
+        "bytes": 11508,
+        "sha256": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size2-Regular-Dy4dx90m.woff2",
+        "bytes": 5208,
+        "sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size2-Regular-oD1tc_U0.woff",
+        "bytes": 6188,
+        "sha256": "2014c523c3210bcc166648c4d4cc57f05b747df07a24277bf71c51e67dc79e3d"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size3-Regular-CTq5MqoE.woff",
+        "bytes": 4420,
+        "sha256": "6ab6b62e9b62dae2c00dd90f791bd10950be0ecc3490d7d6045f51c2e8fe0949"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size3-Regular-DgpXs0kz.ttf",
+        "bytes": 7588,
+        "sha256": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size4-Regular-BF-4gkZK.woff",
+        "bytes": 5980,
+        "sha256": "99f9c6750b489c9462bf04900bd3f939df9b829339daaaaa99ef5495cdddea58"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size4-Regular-Dl5lxZxV.woff2",
+        "bytes": 4928,
+        "sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Size4-Regular-DWFBv043.ttf",
+        "bytes": 10364,
+        "sha256": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Typewriter-Regular-C0xS9mPB.woff",
+        "bytes": 16028,
+        "sha256": "e14fed02b1aba7ce9f5afd5844b5d0321b22351febc720e0de8b8723527609f7"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Typewriter-Regular-CO6r4hn1.woff2",
+        "bytes": 13568,
+        "sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b"
+      },
+      {
+        "path": "assets/fonts/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf",
+        "bytes": 27556,
+        "sha256": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa"
+      },
+      {
+        "path": "assets/index-BKQ_L1z6.js",
+        "bytes": 555959,
+        "sha256": "ae6b5df63da1ac26890eeb1847272005ab3860048d8fb46de1d08732861703c3"
+      },
+      {
+        "path": "assets/index-DPX2bQLO.css",
+        "bytes": 51949,
+        "sha256": "655002ec23f62f51efeed3e3a5fd612ae57f04597de7b00ddfd4c17238749454"
+      },
+      {
+        "path": "assets/langs/c-BIGW1oBm.js",
+        "bytes": 72152,
+        "sha256": "9c06263922b97a0e5890b832e23d44f3c0da54430ac6f971aa0ede8f4c2b8b66"
+      },
+      {
+        "path": "assets/langs/cpp-DIPi6g--.js",
+        "bytes": 637594,
+        "sha256": "e8e90a01d5632251be2784ecea9b061cf05f962db1c8684a8bae6480eba88823"
+      },
+      {
+        "path": "assets/langs/csharp-DSvCPggb.js",
+        "bytes": 90233,
+        "sha256": "8443ef70cc6fec2de601c15c548ab1890e9bbc71a21ba9c216de77481c3cb6d6"
+      },
+      {
+        "path": "assets/langs/css-CLj8gQPS.js",
+        "bytes": 49082,
+        "sha256": "69ee0204c2c40a92b8368049da700f0d08d40f5274809cfb624fd09e73eb32ee"
+      },
+      {
+        "path": "assets/langs/go-C27-OAKa.js",
+        "bytes": 46858,
+        "sha256": "a6c3f73f1abb778ef3f5e489db1942542dc88ddac5b111ff55813fa1655dd23c"
+      },
+      {
+        "path": "assets/langs/html-CfGypltT.js",
+        "bytes": 232159,
+        "sha256": "15ce12410bda36a36fe67290bd2ed65ab32f90c9624554f129632613843e43d0"
+      },
+      {
+        "path": "assets/langs/ini-BEwlwnbL.js",
+        "bytes": 1566,
+        "sha256": "d72bde3de42bb1ef3268bd65afedecf54747c208ac24335f7c6b4456924091c1"
+      },
+      {
+        "path": "assets/langs/java-CylS5w8V.js",
+        "bytes": 27261,
+        "sha256": "934a0e63cf4cefb991100f15c42fdc60aaee3c7036a7ba6cb10ce5a6322a7ae9"
+      },
+      {
+        "path": "assets/langs/kotlin-BdnUsdx6.js",
+        "bytes": 8829,
+        "sha256": "99d81f485d9366a1f3f8c84b0fc5cee69b0d28d6c8f7f1e8dac29e554e80d24f"
+      },
+      {
+        "path": "assets/langs/less-B1dDrJ26.js",
+        "bytes": 97675,
+        "sha256": "50c4bace8838379b74e0a22dab369c3cb81b57ba1b5b17ea5af8668f8290e8bf"
+      },
+      {
+        "path": "assets/langs/lua-BaeVxFsk.js",
+        "bytes": 15576,
+        "sha256": "b218901041a92a152f51a7f3f74f26120e931e258abb1c73bcee551721015f67"
+      },
+      {
+        "path": "assets/langs/markdown-Cvjx9yec.js",
+        "bytes": 59381,
+        "sha256": "d9a83df9f57287a1f3594d5231480ea90a14adf7a8550c7a57930c3cf5b3f47d"
+      },
+      {
+        "path": "assets/langs/mdx-Cmh6b_Ma.js",
+        "bytes": 136155,
+        "sha256": "8b88c45af52bcc95513e479bfce5b068d91f60a811acf8bb614bbb071d0e1151"
+      },
+      {
+        "path": "assets/langs/php-DJl5gRdb.js",
+        "bytes": 113111,
+        "sha256": "c2f5205e0694b71750105b62bc4cd03699d4e458d2eb7e45a21788687736a986"
+      },
+      {
+        "path": "assets/langs/python-B6aJPvgy.js",
+        "bytes": 69996,
+        "sha256": "1c6725168b498ade965cf0d8723c600fc9bf0de74988b6191106b304b571aaae"
+      },
+      {
+        "path": "assets/langs/ruby-5eNB0pDK.js",
+        "bytes": 425791,
+        "sha256": "e9e3739ee4458e3f2d7522cf1f64a0e3d103d77b09c6ed500ea0e886a2b0904c"
+      },
+      {
+        "path": "assets/langs/rust-B1yitclQ.js",
+        "bytes": 15111,
+        "sha256": "c02d27696b07c37fa2cac9de826a967a30401a33959cd891ebbf11d5bf245ce3"
+      },
+      {
+        "path": "assets/langs/scss-D5BDwBP9.js",
+        "bytes": 27246,
+        "sha256": "d873165bb797f0547966aa681ade9af96c06ec17c2b0c12708303d9ace461753"
+      },
+      {
+        "path": "assets/langs/sql-CRqJ_cUM.js",
+        "bytes": 23469,
+        "sha256": "60e00dca0f03a580d3717adbb9c730772e750909dc8c78408051091278eda6c0"
+      },
+      {
+        "path": "assets/langs/swift-D82vCrfD.js",
+        "bytes": 86730,
+        "sha256": "db1c1476b58bc8b4ed86fe585ad9191fcb55b7ad851144e7d60af1836f49c26a"
+      },
+      {
+        "path": "assets/langs/toml-vGWfd6FD.js",
+        "bytes": 6468,
+        "sha256": "aeb916b96e9eb064aa87c8f765abfded0ab0d53aefa3aa9b90cc1af4d1ad75d2"
+      },
+      {
+        "path": "assets/langs/xml-sdJ4AIDG.js",
+        "bytes": 5425,
+        "sha256": "d41d94621a62727ad56943d2d7e04e820c2642c3a9c246eb10e7d6e6e89d1fed"
+      },
+      {
+        "path": "assets/langs/yaml-Buea-lGh.js",
+        "bytes": 10548,
+        "sha256": "8aad9cddbe3602b06b194e66d021aa63d715df01cf94e8ffcac810e48f0529e3"
+      },
+      {
+        "path": "assets/vendor-BNsW4eBh.css",
+        "bytes": 29288,
+        "sha256": "9860041e810431da5a6b83e63f883ab8ff4fc49b4af3fc76681b46f778783a9f"
+      },
+      {
+        "path": "assets/vendor-CCJJTK99.js",
+        "bytes": 740575,
+        "sha256": "38f95ea3ff85b49dc4d8f237db208bbaedd2cb8c31611215c246dde41786ff21"
+      },
+      {
+        "path": "assets/xuanji-dsh-layout.css",
+        "bytes": 3618,
+        "sha256": "92b6b2b867b30e6109f2152adcda887ebbf2785e7876fed8534a126969687c91"
+      },
+      {
+        "path": "assets/xuanji-theme.css",
+        "bytes": 7746,
+        "sha256": "022eeb56f8e21dc5ffa1a7ac8be26ffd07fb1110579ba80dd5412d2e03cdda56"
+      },
+      {
+        "path": "assets/xuanji-ui.js",
+        "bytes": 2210,
+        "sha256": "b8f8669327913af2b24a47557c3f61add929bc03122325c457bcd11b8c840917"
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 3721,
+        "sha256": "c61a62a9d47d8660f9cfe08aac6775ff0476f7d6c5053f7659c1f8493fd6d814"
+      },
+      {
+        "path": "index.html",
+        "bytes": 856,
+        "sha256": "440cf6de0c3b63c80437317c51620872059c26c011a8ac44a78b88167c01e3ca"
+      },
+      {
+        "path": "manifest.webmanifest",
+        "bytes": 267,
+        "sha256": "9b54d57eea00f2fdd1affe6e7999a4209a515755f12ac1a3299da2d55e178d4c"
+      }
+    ]
+  },
+  "plugins": {
+    "count": 55,
+    "packages": {
+      "dsh-api-gateway": "097fb9a1f19c61a330f3769ada8c52f3c1c26cf5395afe8b498f135489484347",
+      "dsh-api-remotes": "bec369e0f471422d393622a8ef757a0b21113bbe58ed7ea6cf1cad616146d645",
+      "dsh-api-session-controller": "ff33d1f85a0b2f14568fcb555d5f52d2ba5f57f2e0ecfa5d7885ba83e7ff6069",
+      "dsh-api-workspace-controller": "7d603e41788d1f3873f2bbeee575155e0ece8fa0009ec4f2d5b307b5d75e6990",
+      "dsh-api-workspace-files": "73cdadc4ed04110b789f970e62fc4b0a3bb9562117f817d04acbf14449eede2d",
+      "dsh-client-connection": "319cc46762af6ccb7ac74c9bab37ab8377be212dad9de4dba1f892b7e5b4d8a1",
+      "dsh-client-file-upload": "90d4a010e44f58872c8ea172fa80445ce0e5baf54c886418ae7302f8166c6c53",
+      "dsh-client-hmr": "39cf44a8202214eca333d8f8fdf98b3fd35933ee27d75c42b5e98e1db96a84e0",
+      "dsh-client-locale": "cff36c3b5f57b0f26223943f1f176cc519c2624f49743afff71718565f88e77e",
+      "dsh-client-modules": "9361241bfbe8a02864df5df9fabf9fbbfa0f5a1914025badab36bdf1b9481751",
+      "dsh-client-resources": "16c6da29e338582fffa6c378dcccd543f7ad0272ea1c457c3e7d6722a9897765",
+      "dsh-client-ui-agent-preset": "815cf13560bfbbf5ff76784e19807b26da4b6e320e005b3ccad5829f023406c0",
+      "dsh-client-ui-approval": "ac4b6f1064c390fc5233e23297f2e1d5c3c26c6c169afc631dffb8ad447249ae",
+      "dsh-client-ui-attachment": "b0245951dfb86dc5259fcae1499160b689460bf2637e0abea94469b45202bea5",
+      "dsh-client-ui-brand-official": "22bb7e181a8d93372e1d14927b201612b09a02c84ea3d0f36933cfff1de47d71",
+      "dsh-client-ui-chat": "6527556d25c7b2a27f2e3bfb96cc2ae3d9244f1213147e245b17684ad8d9e396",
+      "dsh-client-ui-commands": "b04ba5b0d9edc990fe3011c8a97855e7c5a842d5074d25cdd89f33e28604a007",
+      "dsh-client-ui-conversation": "81314dfd95864f2522f8edb812e3f8e08b04a8ef2141913e6e8cbdaae1ffc37f",
+      "dsh-client-ui-cordis": "01e76267d931f8a4f22047443974364e6327002ae17a1803cf1807dc49b31b56",
+      "dsh-client-ui-deliverables": "18172f3f1a4f9c3d9d0f70074794d5e1bd37abd2c169f340f42c1c5efb25e9fe",
+      "dsh-client-ui-directory-picker-browse": "e105f41c2cb2238f4f3e495330935e45b484e59248caf443a4459e971c4a950a",
+      "dsh-client-ui-directory-picker-native": "2e6b8b235966362d6bf4da0af4f0539c251ad0d713bde42463e0f0accc4bd4b7",
+      "dsh-client-ui-goal": "e5fb1dd9b665daa926958be8bc9acc81e94c34c8542652ad31f63f576e3aa82b",
+      "dsh-client-ui-input-trigger": "7c78c0e3dd4d63656ca1b523ef76e93942a8c8e925eec0fb5c95932693ab933c",
+      "dsh-client-ui-jobs": "ca0c460a0a62bf679808af952def3efe8b7e148940aa6bf264bca868425b7382",
+      "dsh-client-ui-layout": "930c10a9bed1094e7bca6242276c22ba7020fd58bac47d70a0fef174544508ef",
+      "dsh-client-ui-message-feedback": "c951bcd9e9fd6e3bf0c788af1c1f53ea66f63131045326ce483570001471a0f5",
+      "dsh-client-ui-model-selection": "630f10f7f9d0c88db77f76488763e1af22eec9e355179ac2dde07678a6d6c731",
+      "dsh-client-ui-open-in-app": "7572451ae5f97ec0fdad71c787f87cddfda9dd0ae2441caf3e710340d9cf6fa2",
+      "dsh-client-ui-permission-presets": "bbdab40835b9be059d292d89e719e8e19ceb31b6963448e268a29746d62c28f1",
+      "dsh-client-ui-plan": "aef1f347976f0d4dab34f398fe503fb655656f914b9536e25ef83c2231ef6bb1",
+      "dsh-client-ui-reference": "3574e386ab9a4404811e130b31869cb0e1a9883420f10f2cf9b1c536ee4ed679",
+      "dsh-client-ui-renderer": "859d0a187e436d682c71d18f0266d588f923d7e1628157ad73000f99a377d151",
+      "dsh-client-ui-schedule": "214542d7d393ebd89fd7d64fd52425b8cef76dde1a27a0017dc4e1a7edbaaeec",
+      "dsh-client-ui-session": "a794b82a58f6e7740041456fc3690596db98db6619749b97c49cd2443a89d5ae",
+      "dsh-client-ui-settings": "479002d654490d19cbc89ed4582198603eddf2a62e3d233bbd30748f1bc0d862",
+      "dsh-client-ui-settings-general": "c5995dba8c3b944a46ebae6bc860b35b8adacd4786105ca636b5b73b84ae396e",
+      "dsh-client-ui-settings-models": "a60fd86357f9fbc6f5276ed0393682f7f2223faedec4f30c719d66e99600b1bb",
+      "dsh-client-ui-settings-plugin-inventory": "b5a6d7f5b2669fe6881a5a1fb8a71cb2dc59324fada8243e25589b98b84e1306",
+      "dsh-client-ui-settings-plugins": "1e8f93289cc0b5f3472378feb085ddeb0f0dd5d3b24192ff60d1e646f347fcb6",
+      "dsh-client-ui-sidebar": "171e3f0014e09c0f907e04e3a5503cae937bdd7169e3dc5f5c63e0e2671f64e0",
+      "dsh-client-ui-sidebar-documentpreview": "dac2e99f7952bf1704fa7496cf26d3e26bcf39f53d299dcf7e7d0ca170784290",
+      "dsh-client-ui-sidebar-files": "b6534874739daa1e2ba1cbbefe169b27259647034f55338239fc306100960f98",
+      "dsh-client-ui-sidebar-right": "32d24a77a28d25b975ffa9560ef94a2af94db232094910de7d5ea94788735afd",
+      "dsh-client-ui-skill": "c92854f3e75a542cea0e3d9c3f4e82a5c4c6c008f25c053c65d52df554d7d63c",
+      "dsh-client-ui-subagent": "b1c5d6f2f26fd7ba5a8764d75d1043bcac0c79cc950dc22044bae23d6bec8c2b",
+      "dsh-client-ui-theme": "be765095ffe627d870945c3367c8f98f5bdae2cda44568003e38e9bdb6c9a331",
+      "dsh-client-ui-tool": "4f7fd677c85b0d7e1bdb79c256ef5ead038cbf392f37368e56ec1ee87ba1902a",
+      "dsh-client-ui-trajectory": "73a878b46046f20d2b28764e33215274cb170f3909681d547d5ed620e19621af",
+      "dsh-client-ui-user-questions": "232a66c60ab295db19336fbe37ab3b0c326b38a17c9d1d0cf23371b8b4664df6",
+      "dsh-client-ui-workflow-run": "42e327536e93689d1b6d56d2b96b07a758441ed1813fbdffe43d63fac54e6c9b",
+      "dsh-client-ui-workspace": "383b9ef779366c13d818500b6488896328b189f156addbaa480c835e902edd5f",
+      "dsh-cordis-client-runner": "e78c94d66a75d69448179ec58c17eed8435415109b963a0ffca903caf2f8ef03",
+      "dsh-session-log-export": "a8b9ff6495d02e0be21d05217885062bd89042eb46ddf4a1d15196bc0089f181",
+      "dsh-typert-registry": "f77db8e57b72314910acd3171efb6cf9dda7652ff6ded23583cb530171433965"
+    }
+  }
+}

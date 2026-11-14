@@ -1,0 +1,63 @@
+/* 璇玑 DSH 布局适配：
+   DSH 自带的左侧竖栏整列移到视口外（不再做成底部操作条）：保留 DOM，
+   让输入框旁注入的「新会话」按钮转发点击、DSH 会话状态照常工作。
+   DSH 的类名是构建产物里的哈希名，随 DSH 版本可能变化；升级 DSH 后需重新核对。 */
+
+/* 主框架：左列 0 宽，中列占满，右列 0 */
+html body .pI_x6G_frame{
+  grid-template-columns:0 minmax(0,1fr) 0 !important;
+}
+
+/* 侧栏整列移出视口（含新会话/工作区/搜索/设置触发器）：不占布局、不可见，按钮仍可被脚本点击 */
+html body .pI_x6G_sidebarCol{
+  position:fixed !important;
+  left:-4000px;bottom:0;
+  width:1px !important;height:1px !important;
+  overflow:visible !important;
+  background:transparent !important;border:0 !important;
+}
+
+/* 中列/右列显式放到网格的 2/3 列；底部不再给操作条留高度 */
+html body .pI_x6G_centerCol{grid-column:2 !important;grid-row:1 !important;padding-bottom:0 !important}
+html body .pI_x6G_rightbarCol{grid-column:3 !important;grid-row:1 !important}
+
+/* 设置入口并入软件总设置：齿轮不可见，但设置区保留（DSH 的设置面板挂在里面） */
+html body .hHd-Xa_settingsArea{width:0 !important;height:0 !important;display:flex !important;overflow:visible !important}
+html body .VOzbGW_triggerRow{visibility:hidden !important}
+
+/* 输入框左下角的「新会话」小按钮（xuanji-ui.js 注入） */
+html body .xj-composer-new{
+  width:28px;height:28px;flex:none;display:inline-flex;align-items:center;justify-content:center;
+  border:0;border-radius:7px;background:transparent;color:var(--dsw-alias-label-tertiary);cursor:pointer;
+  transition:background-color .14s,color .14s;
+}
+html body .xj-composer-new:hover{background:var(--dsw-alias-interactive-bg-hover-solid);color:var(--dsw-alias-label-primary)}
+html body .xj-composer-new svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* 主题由主软件决定：隐藏 DSH 设置里的「外观」切换（浅色/深色/跟随系统已不再影响 DSH） */
+html body ._8HJdBW_group{display:none !important}
+
+/* 软件设置页里嵌入的 DSH 设置：去掉弹窗外框和灰底，铺满设置页 */
+html.xj-settings-embed .VOzbGW_overlay{background:transparent !important}
+html.xj-settings-embed .VOzbGW_panel{
+  width:100% !important;height:100% !important;
+  max-width:none !important;max-height:none !important;
+  border-radius:0 !important;box-shadow:none !important;border:0 !important;
+}
+
+/* 设置页内嵌时：底栏整条隐形（无分隔线、不挡点击），只保留设置面板 */
+html.xj-settings-embed .pI_x6G_sidebarCol{
+  background:transparent !important;border-top:0 !important;pointer-events:none !important;
+}
+html.xj-settings-embed .hHd-Xa_newSession,
+html.xj-settings-embed .hHd-Xa_regionArea{display:none !important}
+html.xj-settings-embed .VOzbGW_overlay{pointer-events:auto !important}
+
+/* 设置页内嵌再收一层：隐掉 DSH 设置自己的标题栏（设置标题、打开配置文件、关闭 X），
+   只保留左侧分类与右侧内容，让它成为软件设置页的一部分而不是一个弹窗 */
+html.xj-settings-embed .VOzbGW_navTitle{display:none !important}
+html.xj-settings-embed .VOzbGW_header{display:none !important}
+html.xj-settings-embed .VOzbGW_nav{padding-top:12px !important}
+html.xj-settings-embed .VOzbGW_options{padding-top:12px !important}
+
+html.xj-settings-embed .VOzbGW_overlay{position:fixed !important;inset:0 !important;padding:0 !important}

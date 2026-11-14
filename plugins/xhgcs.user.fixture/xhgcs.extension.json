@@ -1,0 +1,17 @@
+{
+  "id": "xhgcs.user.fixture",
+  "name": "用户目录插件样例",
+  "version": "0.1.0",
+  "publisher": "local",
+  "description": "放在 %APPDATA%\\XiHe GCS PRO\\extensions 下的样例插件；只有一条命令，用来验证用户扩展目录能被发现、激活、停用。",
+  "apiVersion": "1",
+  "engines": { "xhgcs": ">=0.10.0 <1.0.0" },
+  "main": "main.js",
+  "activationEvents": ["onCommand:userfixture.ping"],
+  "permissions": ["ui:toast", "commands:execute"],
+  "contributes": {
+    "commands": [
+      { "id": "userfixture.ping", "title": "用户插件 Ping", "category": "用户" }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+# 依赖与构建产物（跑 npm i / npm run dist 就会重新生成）
+node_modules/
+dist/
+
+# 运行日志与测试残留（串口桥、TTS、静态服务器都会往这里写）
+logs/
+*.log
+*.wav
+# 例外：测试要回放的真实抓包样本，必须入库（否则别人机器上回放测试直接失效）
+!tests/fixtures/*.log
+
+# 我这边跑审计/打包用的临时脚本，不进仓库
+tools/_*
+tools/desktop-screenshot.png
+
+# 系统杂物
+.DS_Store
+Thumbs.db
+desktop.ini
+# Python 缓存（build/make-icon.py 之类）
+__pycache__/
+*.pyc
+
+
+# 单测编译产物（npm run test:unit 生成）
+.tmp/
+
+# DSH 运行时（npm run prepare:dsh 生成，体积大，不进仓库）
+vendor/
+
+# 本机密钥与临时补丁
+.env
+.env.*
+!.env.example
+.credentials*
+*.pfx
+*.pem
+.xh-port-patch*.cjs
