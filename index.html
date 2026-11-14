@@ -2104,8 +2104,8 @@ button:active{filter:brightness(.96)}
         <button class="rail-btn" id="settingsBtn" title="系统设置">
           <svg viewBox="0 0 16 16"><path d="M2.5 5h11M2.5 8h11M2.5 11h11"/><circle cx="6" cy="5" r="1.1" fill="currentColor" stroke="none"/><circle cx="10" cy="8" r="1.1" fill="currentColor" stroke="none"/><circle cx="7" cy="11" r="1.1" fill="currentColor" stroke="none"/></svg><span class="lbl">设置</span>
         </button>
-        <button class="rail-btn" title="帮助">
-          <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/><path d="M6.4 6.2a1.7 1.7 0 1 1 2.1 2.1c-.4.2-.5.5-.5.9v.3"/><circle cx="8" cy="11.6" r=".6" fill="currentColor" stroke="none"/></svg><span class="lbl">帮助</span>
+        <button class="rail-btn" id="updateBtn" title="检查软件更新">
+          <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/><path d="M6.4 6.2a1.7 1.7 0 1 1 2.1 2.1c-.4.2-.5.5-.5.9v.3"/><circle cx="8" cy="11.6" r=".6" fill="currentColor" stroke="none"/></svg><span class="lbl">更新</span>
         </button>
       </div>
     </nav>
@@ -3030,12 +3030,12 @@ button:active{filter:brightness(.96)}
 </div>
 
 
-    <link rel="stylesheet" href="assets/css/native-view.css?v=20261113A">
-    <script src="assets/js/native-view.js?v=20261113A"></script>
-    <script src="assets/js/native-view-host.js?v=20261113A"></script>
-    <script src="assets/js/data.js?v=20261113A"></script>
-    <script src="assets/js/protocol.js?v=20261113A"></script>
-    <script src="assets/js/serial.js?v=20261113A"></script>
+    <link rel="stylesheet" href="assets/css/native-view.css?v=20261115A">
+    <script src="assets/js/native-view.js?v=20261115A"></script>
+    <script src="assets/js/native-view-host.js?v=20261115A"></script>
+    <script src="assets/js/data.js?v=20261115A"></script>
+    <script src="assets/js/protocol.js?v=20261115A"></script>
+    <script src="assets/js/serial.js?v=20261115A"></script>
 
 <script>
 (function(){
@@ -9376,11 +9376,11 @@ window.XHGCS_SHELL = (function () {
 
 })();
 </script>
-    <script src="assets/js/v43-bridge.js?v=20261113A"></script>
-    <script src="assets/js/ai-connection.js?v=20261113A"></script>
-    <script src="assets/js/shell-bridge.js?v=20261113A"></script>
-    <script src="assets/js/ai-dock.js?v=20261113A"></script>
-    <script src="assets/js/ai-agents.js?v=20261113A"></script>
+    <script src="assets/js/v43-bridge.js?v=20261115A"></script>
+    <script src="assets/js/ai-connection.js?v=20261115A"></script>
+    <script src="assets/js/shell-bridge.js?v=20261115A"></script>
+    <script src="assets/js/ai-dock.js?v=20261115A"></script>
+    <script src="assets/js/ai-agents.js?v=20261115A"></script>
 <script>
 (function workbenchMotion(){
 const reduce=matchMedia('(prefers-reduced-motion:reduce)');
@@ -9541,5 +9541,6 @@ document.querySelectorAll('.split-v').forEach(el=>el.addEventListener('pointerdo
     try { window.__xhWB && window.__xhWB.flushResize && window.__xhWB.flushResize(); } catch (e) {}
   });
 })();
-</script></body>
+</script><script src="assets/js/update.js?v=20261115A"></script>
+</body>
 </html>

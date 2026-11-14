@@ -3,7 +3,7 @@
 
   const KEY = 'xhgcs.layout.v3';
   const LEGACY_KEY = 'xhgcs.layout.v2';
-  const VERSION = '20261113A';
+  const VERSION = '20261115A';
   window.XHGCS_LAYOUT_VERSION = VERSION;
 
   const $ = (selector) => document.querySelector(selector);

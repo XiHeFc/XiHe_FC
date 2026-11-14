@@ -1,7 +1,7 @@
 {
   "name": "xhgcs-pro",
   "productName": "Xuanji",
-  "version": "0.31.0",
+  "version": "0.31.1",
   "private": true,
   "description": "XiHe_GCS PRO 地面站桌面版：串口采集、波形仪表、数据分析画布、AI 对话与 MCP 桥",
   "main": "electron/main.js",
@@ -61,7 +61,9 @@
       "tools/*.bat",
       "AGENTS.md",
       "README.md",
-      "package.json"
+      "package.json",
+      "LICENSE",
+      "dsh-ui/LICENSE.DeepSeek"
     ],
     "asar": true,
     "asarUnpack": [
@@ -123,6 +125,16 @@
         "from": "build/xuanji-mcp.cmd",
         "to": "xuanji-mcp.cmd"
       }
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "XiHeFc",
+        "repo": "XiHe_FC"
+      }
     ]
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.11"
   }
 }

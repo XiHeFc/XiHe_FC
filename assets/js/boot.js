@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const VERSION = '20261113A';
+  const VERSION = '20261115A';
   window.XHGCS_ASSET_VERSION = VERSION;
   const BASE = 'assets/js/';
   const GROUPS = {

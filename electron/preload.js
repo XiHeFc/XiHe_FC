@@ -9,6 +9,14 @@ const desktopApi = {
     chrome: process.versions.chrome,
     node: process.versions.node
   },
+  updates: {
+    check: () => ipcRenderer.invoke('update:check'),
+    onStatus: (handler) => {
+      const listener = (event, text) => handler(String(text));
+      ipcRenderer.on('update:status', listener);
+      return () => ipcRenderer.removeListener('update:status', listener);
+    }
+  },
   getStatus: () => ipcRenderer.invoke('desktop:status'),
   restartServices: () => ipcRenderer.invoke('desktop:restart-services'),
   // AI / MCP：实例身份、诊断、受限令牌。令牌只给本应用 origin 的页面。

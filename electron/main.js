@@ -347,6 +347,8 @@ function handleTrusted(channel, handler) {
 }
 
 function registerIpc() {
+  const checkUpdate = require('./updater').createUpdater({ app, dialog, shell, window: () => mainWindow, recording: () => Boolean(recorder && recorder.status().active) });
+  handleTrusted('update:check', () => checkUpdate());
   handleTrusted('desktop:status', () => statusPayload());
 
   // 自绘窗口按钮（渲染层）→ 主进程。返回是否最大化，界面据此换图标。

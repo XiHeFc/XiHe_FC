@@ -826,7 +826,7 @@
     });
   }
   const CORE_API_VERSION = "1";
-  const CORE_VERSION = "0.31.0";
+  const CORE_VERSION = "0.31.1";
   const ID_RE = /^[a-z0-9][a-z0-9._-]{2,63}$/i;
   const KNOWN_PERMISSIONS = [
     "data:read",

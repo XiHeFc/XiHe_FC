@@ -12,7 +12,7 @@ $root = Split-Path -Parent $tools
 $logDir = Join-Path $root 'logs'
 $webPort = 8123
 $bridgePort = 8787
-$webUrl = "http://127.0.0.1:$webPort/index.html?v=20261113A"
+$webUrl = "http://127.0.0.1:$webPort/index.html?v=20261115A"
 
 New-Item -ItemType Directory -Force -Path $logDir | Out-Null
 
