@@ -1,5 +1,14 @@
 # XiHe_GCS PRO
 
+## Windows 源码启动
+
+普通用户请从 Releases 下载 Windows 安装包。GitHub 自动生成的 Source code ZIP 是源码，不包含运行依赖。
+
+开发运行：安装 Node.js 22 或更新版本，完整解压源码，然后双击 `启动璇玑.bat`（原 `启动 XiHe GCS PRO.bat` 也可）。首次会自动用 npm 安装锁文件指定的 Electron、Harness 和依赖，需联网并等待；失败时窗口会保留错误信息。无需安装 Python，AI 凭据仍需自行配置。此入口只运行当前源码目录，不会跳转到其它已安装版本。
+
+仅检查依赖：`node tools/start-source.cjs --check`。
+
+
 将原单文件 `XiHe_GCS.html` 完善并重构为可维护的文件夹项目。可直接双击 `index.html` 使用，无需安装依赖；AI 高级功能与 MCP 桥需要本地 Node.js，可选 Python。
 
 ## 功能总览
